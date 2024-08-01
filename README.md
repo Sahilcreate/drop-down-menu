@@ -1,8 +1,8 @@
 # Drop Down Menu
 
 ## ABOUT
-A simple drop-down-menu using CSS & JS.
-![Drop Down Close](drop-down-close.png);
+A simple drop-down-menu using CSS & JS.  
+![Drop Down Close](drop-down-close.png);  
 ![Drop Down Open](drop-down-open.png);
 
 ## OBJECTIVES
