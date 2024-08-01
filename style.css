@@ -1,0 +1,123 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My Code */
+@font-face {
+  font-family:'Bolt';
+  src: url('./src/Bolt\ Regular.woff2') format('woff2'),
+    url('./src/Bolt\ Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-007D;
+}
+
+.drop-down-section {
+  width: max-content;
+  height: max-content;
+  position: relative;
+  font-family: 'Bolt';
+}
+
+.drop-down-btn {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 6px 20px;
+  border: 1.5px solid black;
+  font-weight: 600;
+  color: white;
+  background-color: #D2122E;
+  position: relative;
+}
+
+.drop-down-btn-border {
+  content: " ";
+  position: absolute;
+  height: calc(100% - 3px);
+  width: 2px;
+  background-color: #D2122E;
+  right: 1.5px;
+  top: 1.5px;
+  transition: width 0.5s, background-color 0.5s;
+}
+
+.drop-down-container {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  border: 1.5px solid black;
+  border-top: none;
+}
+
+.drop-down-link {
+  display: block;
+  padding: 6px 10px;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.drop-down-btn-clicked + .drop-down-btn-border {
+  background-color: black;
+  width: 12px;
+}
+
+.drop-down-btn-not-clicked + .drop-down-btn-border {
+  background-color: #D2122E;
+  width: 2px;
+}
+
+.drop-down-link:hover {
+  background-color: #D2122E;
+  color: white;
+}
